@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ThirdPartyLibraryDemo
+﻿namespace ThirdPartyLibraryDemo
 {
-   public class AddressData
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    //AddressData modal class 
+    public class AddressData
    {
         public string FirstName { get; set; }
         public string LastName { get; set; }

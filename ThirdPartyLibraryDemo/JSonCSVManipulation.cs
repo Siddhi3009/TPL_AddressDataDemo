@@ -1,17 +1,17 @@
-﻿using CsvHelper;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-
-namespace ThirdPartyLibraryDemo
+﻿namespace ThirdPartyLibraryDemo
 {
+    using CsvHelper;
+    using Newtonsoft.Json;
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
+    using System.Reflection.Metadata;
+    using System.Text;
     class JSonCSVManipulation
     {
+        //Read from CSV File and Write to JSON File
         public static void ImplementCSVToJSON()
         {
             string exportFilePath = @"C:\Users\Administrator\Desktop\BridgeLabz Practice\34. ThirdPartyLibraryDemo\TPL_AddressDataDemo\ThirdPartyLibraryDemo\Utility\AddressDetails.json";
@@ -39,10 +39,11 @@ namespace ThirdPartyLibraryDemo
                 }
             }
         }
+        //Read From JSON File and Write to CSV File
         public static void ReadJSONWriteCSV()
         {
-            string importFilePath = @"C:\Users\Administrator\Desktop\BridgeLabz Practice\34. ThirdPartyLibraryDemo\ThirdPartyLibraryDemo\Utility\AddressDetails.json";
-            string exportFilePath = @"C:\Users\Administrator\Desktop\BridgeLabz Practice\34. ThirdPartyLibraryDemo\ThirdPartyLibraryDemo\Utility\AddressDetails.csv";
+            string importFilePath = @"C:\Users\Administrator\Desktop\BridgeLabz Practice\34. ThirdPartyLibraryDemo\TPL_AddressDataDemo\ThirdPartyLibraryDemo\Utility\AddressDetails.json";
+            string exportFilePath = @"C:\Users\Administrator\Desktop\BridgeLabz Practice\34. ThirdPartyLibraryDemo\TPL_AddressDataDemo\ThirdPartyLibraryDemo\Utility\AddressDetails.csv";
             IList<AddressData> addressData = JsonConvert.DeserializeObject<IList<AddressData>>(File.ReadAllText(importFilePath));
             Console.WriteLine("Reading From JSON to CSV");
             using (var writer = new StreamWriter(exportFilePath))
