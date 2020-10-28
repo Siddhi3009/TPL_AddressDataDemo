@@ -3,7 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
-    //AddressData modal class 
+    /// <summary>
+    /// Address data modal class to get details of each person 
+    /// </summary>
     public class AddressData
    {
         public string FirstName { get; set; }
